@@ -48,7 +48,7 @@ startPlaying = ->
         $('#console').text("You are the spy!\nYou need to figure out where the secret location is.")
       else
         $('#console').text(
-          "You are not a spy. Secret location: #{gameState.places[gameState.place]}\n" +
+          "You are not a spy.\nSecret location: #{gameState.places[gameState.place]}\n" +
           "The spy does not know this location.\n" +
           "You need to figure out who the spy is."
         )
@@ -58,7 +58,10 @@ startPlaying = ->
     $('#reveals').append $reveal
   gameState.playing = true
   $('#setup-start').text('Restart!')
-  $('#console').text('Each player should now click a card to reveal their role.')
+  $('#console').text(
+    "A random location and spy have been chosen!\n" +
+    "Each player should now click a card to reveal their role."
+  )
 
 pickSpy = ->
   gameState.spy = _.random(1, gameState.numPlayers)
@@ -75,6 +78,34 @@ autoload = (selector) ->
   
   if localStorage[location.href + ' ' + selector]
     $(selector).val(localStorage[location.href + ' ' + selector])
+  else
+    resetPlaces()
+
+resetPlaces = ->
+  $('#setup-places').val [
+    'Lower Sproul'
+    'Upper Sproul'
+    'Sather Gate'
+    'Main Stacks'
+    'Underhill'
+    'The lower floor of MLK'
+    'Zellerbach Hall'
+    'A fridge in Ida Sproul Hall'
+    'Soda Hall basement'
+    'Berkeley Community Theatre'
+    'Dwinelle Hall bathrooms'
+    'Crossroads'
+    'Hearst Parking Structure'
+    'Berkeley Rose Garden'
+    'Nations in San Pablo'
+    'The Campanile'
+    'San Jose'
+    "People's Park"
+    ].join('\n')
+
+  evt = document.createEvent('Event')
+  evt.initEvent('autosize:update', true, false)
+  $('#setup-places')[0].dispatchEvent(evt)
 
 $ ->
   H5F.setup $('.container')
@@ -82,6 +113,8 @@ $ ->
   autoload('#setup-places')
   autoload('#setup-numplayers')
   autosize($('#setup-places'))
+
+  $('#setup-reset-places').click resetPlaces
 
   $('#setup-start').click (e) ->
     valid = $('.container')[0].checkValidity?()

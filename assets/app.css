@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  font: 21px 'Courier new', monospace;
+  font: 18px 'Courier new', monospace;
   display: flex;
   flex-direction: column;
   padding: 1em;
@@ -68,11 +68,12 @@ button:focus {
 
 header {
   font-weight: bold;
-  margin: 1em auto;
+  margin: 0.5em auto 0.2em;
+  font-size: 1.1em;
 }
 
 .group {
-  margin: 1em 0;
+  margin: 0.4em 0;
 }
 
 .group-setup-numplayers {
@@ -89,6 +90,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   line-height: 1em;
+  text-align: center;
+  justify-content: center;
 }
 
 .reveal {
@@ -105,6 +108,7 @@ header {
   justify-content: center;
   font-size: 0.8em;
   white-space: pre-wrap;
+  text-align: center;
 }
 
 .reveal.viewed {
@@ -128,4 +132,5 @@ ul {
 fieldset {
     border: 1px solid black;
     padding-bottom: 0.2em;
+    margin: 1.5em 0;
 }
