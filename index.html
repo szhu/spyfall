@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>S P Y F A L L</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script type="text/javascript" src="jquery-2.2.0.min.js" map="jquery-2.2.0.min.map"></script>
+    <script type="text/javascript" src="H5F.js"></script>
+    <script type="text/javascript" src="autosize.js"></script>
+    <script type="text/javascript" src="lodash.js"></script>
+    <script type="text/javascript" src="coffee-script.js"></script>
+    <script type="text/coffeescript" src="app.coffee"></script>
+</head>
+
+<body>
+    <form class="container">
+        <header>S P Y F A L L</header>
+        <!--  -->
+        <div class="group group-setup-numplayers">
+            <label for="setup-numplayers">Number of players:</label>
+            <input id="setup-numplayers" type="number" required width="4" />
+        </div>
+        <!--  -->
+        <div class="group group-setup-places">
+            <label for="setup-places">List of places:</label>
+            <textarea id="setup-places" required pattern=".+" spellcheck="false">Lower Sproul
+Upper Sproul
+Sather Gate
+Main Stacks
+Underhill</textarea>
+        </div>
+        <!--  -->
+        <button id="setup-start">Start!</button>
+        <!--  -->
+        <pre id="console"></pre>
+        <div class="group" id="reveals"></div>
+    </form>
+</body>
+
+</html>
