@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>S P Y F A L L</title>
     <link rel="stylesheet" type="text/css" href="/assets/app.css">
     <script type="text/javascript" src="/vendor/assets/jquery-2.2.0.min.js" map="jquery-2.2.0.min.map"></script>
@@ -15,15 +17,14 @@
 <body>
     <form class="container">
         <header>S P Y F A L L</header>
-
-            <fieldset>
-                <p>Spyfall is a multi-player in-person game in which each player is either:</p>
-                <ul>
-                    <li>a spy and has to find a secret location, or</li>
-                    <li>a civilian and is given the location.</li>
-                </ul>
-                <p>The civilians must work together to determine who the spy is.</p>
-            </fieldset>
+        <fieldset>
+            <p>Spyfall is a multi-player in-person game in which each player is either:</p>
+            <ul>
+                <li>a spy and has to find a secret location, or</li>
+                <li>a civilian and is given the location.</li>
+            </ul>
+            <p>The civilians must work together to determine who the spy is.</p>
+        </fieldset>
         <!--  -->
         <div class="group group-setup-numplayers">
             <label for="setup-numplayers">Number of players:</label>
@@ -32,7 +33,21 @@
         <!--  -->
         <div class="group group-setup-places">
             <label for="setup-places">Possible secret locations:</label>
-            <textarea id="setup-places" required pattern=".+" spellcheck="false">Lower Sproul Upper Sproul Sather Gate Main Stacks Underhill
+            <textarea id="setup-places" required pattern=".+" spellcheck="false">Lower Sproul
+Upper Sproul
+Sather Gate
+Main Stacks
+Underhill
+Zellerbach Hall
+A fridge in Ida Sproul Hall
+Soda Hall basement
+Berkeley Community Theatre
+Dwinelle Hall bathrooms
+Crossroads
+Hearst Parking Structure
+Berkeley Rose Garden
+Nations in San Pablo
+The Campanile
             </textarea>
         </div>
         <!--  -->
@@ -42,10 +57,9 @@
         <!--  -->
         <div id="console"></div>
         <div class="group" id="reveals"></div>
-            <fieldset>
-                <p>Spyfall was inspired by <a href="http://spyfall.meteor.com/">spyfall.meteor.com</a> and developed by <a href="http://github.com/szhu">Sean Zhu.</a>
-                Spyfall is open-source. Fork me on GitHub! <a href="https://github.com/szhu/spyfall">github.com/szhu/spyfall</a></p>
-            </fieldset>
+        <fieldset>
+            <p>Spyfall was inspired by <a href="http://spyfall.meteor.com/">spyfall.meteor.com</a> and developed by <a href="http://github.com/szhu">Sean Zhu.</a> Spyfall is open-source. Fork me on GitHub! <a href="https://github.com/szhu/spyfall">github.com/szhu/spyfall</a></p>
+        </fieldset>
     </form>
 </body>
 
