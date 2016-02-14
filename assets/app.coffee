@@ -7,7 +7,6 @@ window.gameState =
 
   spy: null
   place: null
-  currentPlayer: null
 
 
 assert = (cond, msg) ->
@@ -39,24 +38,30 @@ readPlaces = ->
 
 startPlaying = ->
   $('#reveals').empty()
-  for player in [0...gameState.numPlayers]
+  for player in [1..gameState.numPlayers]
     $reveal = $('<button class="reveal"></button>')
     $reveal.text(player)
     $reveal.on 'mousedown', do (player) -> (e) ->
       e.preventDefault()
       $(this).addClass 'viewed'
       if player == gameState.spy
-        $('#console').text("You are the spy!")
+        $('#console').text("You are the spy!\nYou need to figure out where the secret location is.")
       else
-        $('#console').text("Place: #{gameState.places[gameState.place]}")
+        $('#console').text(
+          "You are not a spy. Secret location: #{gameState.places[gameState.place]}\n" +
+          "The spy does not know this location.\n" +
+          "You need to figure out who the spy is."
+        )
     $reveal.on 'click mouseup', do (player) -> (e) ->
       e.preventDefault()
       $('#console').text('')
     $('#reveals').append $reveal
   gameState.playing = true
+  $('#setup-start').text('Restart!')
+  $('#console').text('Each player should now click a card to reveal their role.')
 
 pickSpy = ->
-  gameState.spy = _.random(gameState.numPlayers - 1)
+  gameState.spy = _.random(1, gameState.numPlayers)
   console.log "Spy is: Player #{gameState.spy}"
 
 pickPlace = ->

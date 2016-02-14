@@ -3,18 +3,27 @@
 
 <head>
     <title>S P Y F A L L</title>
-    <link rel="stylesheet" type="text/css" href="app.css">
-    <script type="text/javascript" src="jquery-2.2.0.min.js" map="jquery-2.2.0.min.map"></script>
-    <script type="text/javascript" src="H5F.js"></script>
-    <script type="text/javascript" src="autosize.js"></script>
-    <script type="text/javascript" src="lodash.js"></script>
-    <script type="text/javascript" src="coffee-script.js"></script>
-    <script type="text/coffeescript" src="app.coffee"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/app.css">
+    <script type="text/javascript" src="/assets/jquery-2.2.0.min.js" map="jquery-2.2.0.min.map"></script>
+    <script type="text/javascript" src="/assets/H5F.js"></script>
+    <script type="text/javascript" src="/assets/autosize.js"></script>
+    <script type="text/javascript" src="/assets/lodash.js"></script>
+    <script type="text/javascript" src="/assets/coffee-script.js"></script>
+    <script type="text/coffeescript" src="/assets/app.coffee"></script>
 </head>
 
 <body>
     <form class="container">
         <header>S P Y F A L L</header>
+
+            <fieldset>
+                <p>Spyfall is a multi-player in-person game in which each player is either:</p>
+                <ul>
+                    <li>a spy and has to find a secret location, or</li>
+                    <li>a civilian and is given the location.</li>
+                </ul>
+                <p>The civilians must work together to determine who the spy is.</p>
+            </fieldset>
         <!--  -->
         <div class="group group-setup-numplayers">
             <label for="setup-numplayers">Number of players:</label>
@@ -22,18 +31,21 @@
         </div>
         <!--  -->
         <div class="group group-setup-places">
-            <label for="setup-places">List of places:</label>
-            <textarea id="setup-places" required pattern=".+" spellcheck="false">Lower Sproul
-Upper Sproul
-Sather Gate
-Main Stacks
-Underhill</textarea>
+            <label for="setup-places">Possible secret locations:</label>
+            <textarea id="setup-places" required pattern=".+" spellcheck="false">Lower Sproul Upper Sproul Sather Gate Main Stacks Underhill
+            </textarea>
         </div>
         <!--  -->
-        <button id="setup-start">Start!</button>
+        <div class="group group-setup-start">
+            <button id="setup-start">Start!</button>
+        </div>
         <!--  -->
-        <pre id="console"></pre>
+        <div id="console"></div>
         <div class="group" id="reveals"></div>
+            <fieldset>
+                <p>Spyfall was inspired by <a href="http://spyfall.meteor.com/">spyfall.meteor.com</a> and developed by <a href="http://github.com/szhu">Sean Zhu.</a>
+                Spyfall is open-source. Fork me on GitHub! <a href="https://github.com/szhu/spyfall">github.com/szhu/spyfall</a></p>
+            </fieldset>
     </form>
 </body>
 

@@ -1,0 +1,131 @@
+html,
+body {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+}
+
+.container {
+  font: 21px 'Courier new', monospace;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 640px;
+}
+
+textarea,
+input,
+button {
+  background: none;
+  font: inherit;
+}
+
+textarea {
+  background-image: linear-gradient(transparent 1.23em, black);
+  background-repeat: repeat;
+  background-size: 1px 1.3em;
+  line-height: 1.3em;
+  outline: none !important;
+  resize: none !important;
+  width: 100%;
+  padding-bottom: 1.3em;
+  border: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+input[type="number"],
+input[type="text"] {
+  border: 0px solid black;
+  border-bottom-width: 1px;
+  outline: none !important;
+  display: inline-block;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: black;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 0.5em 0.1em;
+  /* width: 100%; */
+}
+
+button:focus {
+  outline: none;
+  border-color: black;
+}
+
+header {
+  font-weight: bold;
+  margin: 1em auto;
+}
+
+.group {
+  margin: 1em 0;
+}
+
+.group-setup-numplayers {
+  display: flex;
+}
+
+#setup-numplayers {
+  width: 3em;
+  margin: 0 1em;
+  text-align: center;
+}
+
+#reveals {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1em;
+}
+
+.reveal {
+  flex-grow: 0;
+  margin: 0.4em 0.4em;
+  flex-basis: 5em;
+  padding: 1em 0.1em;
+}
+
+#console {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  white-space: pre-wrap;
+}
+
+.reveal.viewed {
+  background: #E4E4E4;
+}
+
+p {
+  margin: 0.2em 0;
+}
+
+ul {
+  margin: 0.3em 0;
+}
+
+#setup-start {
+  width: 100%;
+}
+
+
+
+fieldset {
+    border: 1px solid black;
+    padding-bottom: 0.2em;
+}
